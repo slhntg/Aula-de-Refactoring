@@ -1,16 +1,11 @@
 public class Movie {
 
     public double getCharge(int daysRented, Rental each){
-        return _price.getCharge(daysRented, each);
+        return _price.getCharge(daysRented);
     }
 
     public int getFrequentRenterPoints(int daysRented, Rental each){
-        int frequentRenterPoints = 0;
-          // add frequent renter points
-          frequentRenterPoints ++;
-          if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
-             each.getDaysRented() > 1) frequentRenterPoints ++;
-          return frequentRenterPoints;
+        return _price.getFrequentRenterPoints(daysRented, each);
     }
 
   public static final int  CHILDRENS = 2;
