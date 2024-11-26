@@ -23,6 +23,15 @@ public class Movie {
           return thisAmount;
     }
 
+    public int getFrequentRenterPoints(int daysRented, Rental each){
+        int frequentRenterPoints = 0;
+          // add frequent renter points
+          frequentRenterPoints ++;
+          if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
+             each.getDaysRented() > 1) frequentRenterPoints ++;
+          return frequentRenterPoints;
+    }
+
   public static final int  CHILDRENS = 2;
   public static final int  REGULAR = 0;
   public static final int  NEW_RELEASE = 1;
