@@ -15,6 +15,10 @@ public class Movie {
   private String _title;
  private Price _price;
 
+    public String getTitle() {
+        return _title;
+      }
+
    public Movie(String name, int priceCode) {
       _title = name;
       setPriceCode(priceCode);
